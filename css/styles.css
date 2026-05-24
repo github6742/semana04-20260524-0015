@@ -1,0 +1,710 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* FONT FACE uso de tipografia descargada */
+@font-face {
+  font-family: "Boston Traffic";
+  src: url(../assets/fonts/boston_traffic.ttf);
+}
+
+/* RESETEO con selector universal, aplica estilos a cada uno de los elementos de los html se recomienda solo para reseteo  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none; /* saca bullets de lista */
+}
+/* aplica a todos los enlaces dentro de items de lista */
+li > a {
+  color: black; /* saca color por default de enlace */
+  text-decoration: none; /* saca subrayado por default enlaces */
+  font-size: 15px;
+}
+
+/* HERENCIA al aplicarla en la etiqueta body afecta a todos los elementos de todos los html */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #dfb88b;
+}
+/* estilos por CLASE puedo colocar muchas clases a un mismo elemento, solo aplica a los elementos que tengan esa clase La clase tiene mas peso que la etiqueta. REUTILIZABLE */
+
+.marianela {
+  color: #905d23;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+/* ESPECIFICIDAD = estoy marcando especificamente estos estilos a la clase que esta dentro del id fondoPrincipal*/
+#fondoPrincipal .heroSection {
+  background-image: url(../assets/img/hero-img.webp);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#fondoPrincipal .heroSection .heroTxt {
+  font-size: 25px;
+  font-weight: 600;
+  font-style: italic;
+  background-color: rgba(247, 205, 155, 0.61);
+  width: 25%;
+  padding: 25px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+/* lo dejo sin especificidad porque lo reutilizo en diferentes elementos */
+.txtMayuscula {
+  text-transform: uppercase;
+  /* cambio a mayusculas */
+}
+
+.subrayado {
+  text-decoration: red 4px underline;
+}
+
+/* ------ */
+.logo {
+  width: 64px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+header,
+footer {
+  background-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px; /* aca se puede mostrar diferencia si coloco margin */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  /* agregamos z index con un numero positivo alto para que el header siempre quede por encima de cualquier otro contenido */
+  z-index: 100;
+}
+
+nav {
+  width: 70%;
+}
+
+header nav.mobile{
+  display: none;
+}
+
+/* header nav ul.desktop{
+  display: flex;
+} */
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* USO ETIQUETA SPAN  */
+.marianela span {
+  font-weight: 600;
+  color: rgb(187, 161, 16);
+}
+
+main {
+  text-align: center;
+}
+
+/* SOBRE MI */
+
+section.sobreMi {
+  margin: 5px;
+}
+
+section.sobreMi .intro {
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section.sobreMi .intro .introText {
+  width: 40%;
+}
+
+section.sobreMi .intro .introText h2 {
+  text-align: center;
+}
+
+section.sobreMi .intro .introText p {
+  text-align: justify;
+}
+
+section.sobreMi .intro .autoretrato {
+  width: 30%;
+}
+
+section.sobreMi .intro .beca {
+  width: 40%;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.interlineado {
+  line-height: 2;
+}
+
+section.sobreMi .intro .introText .tituloBeca {
+  padding: 20px;
+}
+
+section.sobreMi .intro img.absolute {
+  top: 2px;
+  right: 15px;
+  width: 65px;
+}
+
+/* PORTFOLIO */
+.carousel {
+  margin: 0 auto;
+  width: fit-content;
+}
+.carousel img {
+  width: 20vw; /* por ahora solo iran las 4 imagenes juntas */
+}
+
+.video video {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
+
+.criaturasMagicas iframe {
+  width: 40vw;
+  height: 50vh;
+}
+
+.portfolio section {
+  margin: 30px 7px;
+}
+
+.portfolio h3 {
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+/* CURSOS */
+
+.cursos h1 {
+  font-size: 3.5rem;
+}
+
+.cursos .cursosDisponibles {
+  margin: 25px 0;
+  padding: 7px;
+}
+
+.cursos .cursosDisponibles h2 {
+  font-size: 2.75rem;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.cursos .cursosDisponibles .card {
+  /* width: 350px; */
+  width: auto;
+  border: 1px solid #ffef00;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cursos .cursosDisponibles div img {
+  width: 100%;
+}
+
+.cursos .cursosDisponibles div h3 {
+  padding: 5px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #ffef00;
+}
+
+/* flex-grow: 1 hace que el parrafo crezca y use el espacio disponible. justify content y alignitems dentro del parrafo centran el texto dentro de ese espacio. 
+
+Porque puedo aplicar flex sobre el parrafo? En este caso el texto dentro del parrafo actua como su hijo flex aunque no hay una etiqueta especifica*/
+
+.cursosDisponibles .gridLines .card p {
+  margin: 5px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -----------INICIO GRID AREA------------------ */
+      .gridArea {
+            display: grid;
+            grid-template-columns: 1.5fr 200px repeat(2, 1.5fr) 3fr;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas: 
+                "tinta_china croquis acuarela acuarela botanica"
+                "tinta_china croquis acuarela acuarela botanica"
+                "procrearte procrearte acuarela acuarela botanica"
+                "procrearte procrearte photoshop photoshop dibujo"
+                "procrearte procrearte photoshop photoshop ilustracion";
+            width: 80vw;
+            height: 80vh;  
+            margin: 0 auto;
+            gap: 10px;
+            position: relative;
+            background-color: #954313d4;
+            padding: 7px;
+        }
+
+     .gridArea img {
+            object-fit: cover;
+            width: 100% ;
+            height: 100% ;
+            min-height: 0; /*  Permite que se reduzca si es necesario y ayuda a que las imagenes se vean siempre bien*/
+        }
+
+        .gridArea .tintaChina {
+            grid-area: tinta_china;
+        }
+
+        .gridArea .introIlustracion {
+            grid-area: ilustracion;
+            object-position: center top;
+        }
+
+        .gridArea .croquisArquitectonico {
+            grid-area: croquis;
+        }
+
+        .gridArea .acuarelaCreativa {
+            grid-area: acuarela;
+            object-position: center;
+        }
+
+        .gridArea .ilustracionBotanica {
+            grid-area: botanica;
+        }
+
+        .gridArea .ilustracionDibujo {
+            grid-area: dibujo;
+            object-position: center ;
+        }
+
+        .gridArea .ilustracionProcrearte {
+            grid-area: procrearte;
+        }
+
+        .gridArea .contenedor-ilustracionPhotoshop {
+            grid-area: photoshop;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+        }
+
+        .gridArea .ilustracionPhotoshop {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            background-color: #dfdedd;
+            transform: scale(1.3);
+        }
+
+
+/* -----------FIN GRID AGREA-------------------- */
+/* -----------INICIO GRID LINES------------------ */
+
+
+.cursosDisponibles .gridLines {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) minmax(300px, 2fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 75vw;
+  margin: 0 auto;
+  gap: 10px;
+  background-color: #887c07;
+  justify-items: center;
+  padding: 10px;
+}
+
+.cursosDisponibles .gridLines .card.tintaChina {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.cursosDisponibles .gridLines .card.introIlustracion {
+  grid-column: 3/5;
+  grid-row: 1/2;
+}
+
+.cursosDisponibles .gridLines .card.croquisArquitectonico {
+  grid-column: 5/7;
+  grid-row: 1/2;
+}
+
+.cursosDisponibles .gridLines .card.acuarelaCreativa {
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionBotanica {
+  grid-column: 4/6;
+  grid-row: 2/3;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionDibujo {
+  grid-column: 6/7;
+  grid-row: 2/3;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionProcrearte {
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionPhotoshop {
+  grid-column: 5/7;
+  grid-row: 3/4;
+}
+
+/* ---------------FIN GRID LINES -------------*/
+
+/* CONTACTO con GRID LAYOUT CON GRID LINES */
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) minmax(400px, 1.5fr);
+  grid-template-rows: auto 10vh 70vh auto;
+}
+
+.gridLayout .headerContacto {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.gridLayout .encabezadoContacto {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  text-align: center;
+}
+
+.gridLayout .mainContacto {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  width: 40vw;
+  justify-self: end;
+}
+
+.gridLayout .mainContacto form {
+  height: 100%;
+  font-size: 20px;
+}
+
+.gridLayout .mainContacto form fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 0.5fr) 2fr 0.75fr;
+  height: 90%;
+  padding: 20px;
+}
+
+.gridLayout .mainContacto form fieldset legend {
+  font-size: 25px;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.gridLayout .mainContacto form fieldset input {
+  height: 50%;
+  border-radius: 18px;
+  border: 1px solid #bd6e10;
+  box-shadow: 2px 2px 2px #eaa911;
+}
+
+.gridLayout .mainContacto form fieldset .labelComment {
+  grid-column: 1/3;
+}
+
+.gridLayout .mainContacto form fieldset textarea {
+  grid-column: 1/3;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid #bd6e10;
+  box-shadow: 2px 2px 2px #eaa911;
+}
+
+.gridLayout .mainContacto form fieldset input[type="submit"] {
+  grid-row: 5/6;
+  grid-column: 1/3;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 0px;
+  align-items: center;
+  font-family: "Boston Traffic", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #ff8300;
+  letter-spacing: 9px;
+  box-shadow: 2px 3px 1px black;
+  border: none;
+  margin-top: 10px;
+}
+
+.gridLayout .imgContacto {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  padding: 20px;
+  width: 30vw;
+}
+
+.gridLayout .imagenContacto {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.gridLayout .footerContacto {
+  grid-column: 1/4;
+  grid-row: 4/5;
+}
+
+/* ---------------FOOTER--------------------- */
+
+footer{
+  display: grid;
+  grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
+  grid-template-rows: auto; /* se ajusta a contenido */
+  grid-template-areas: 
+  ". redes redes redes ."
+  "menu menu menu menu menu"
+  ". . copy . .";
+}
+
+footer .footerMenu {
+  margin: 0 auto;
+ width: 100%;
+  grid-area: menu;
+}
+
+footer .footerRedes {
+  margin: 5px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+ width: 100%;
+  align-items: center;
+  grid-area: redes;
+}
+
+.copy {
+  font-size: 15px;
+  text-align: center;
+  grid-area: copy;
+  padding: 15px 0;
+}
+
+.fa-brands {
+  font-size: 30px;
+}
+
+.whatsapp {
+  font-size: 50px;
+  color: green;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+
+
+
+
+/* RESPONSIVE (se adapta a dispositivos mobiles con enfoque desktop first) */
+@media screen and (max-width: 768px) {
+
+header nav.desktop{
+  display: none;
+}
+
+header nav.mobile{
+  display: block;
+  text-align: center;
+}
+
+footer .footerMenu {
+display: none;
+}
+
+  .cursos .gridArea {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "tinta_china "
+      "croquis "
+      "acuarela "
+      "botanica "
+      "procrearte "
+      "ilustracion "
+      "dibujo";
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    gap: 10px;
+    position: relative;
+  }
+
+  .gridArea .ilustracionPhotoshop {
+    display: none;
+  }
+
+.cursosDisponibles .gridLines {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto; 
+}
+
+
+.cursosDisponibles .gridLines .card.tintaChina {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.cursosDisponibles .gridLines .card.introIlustracion {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.cursosDisponibles .gridLines .card.croquisArquitectonico {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.cursosDisponibles .gridLines .card.acuarelaCreativa {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionBotanica {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionDibujo {
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionProcrearte {
+display: none;
+}
+
+.cursosDisponibles .gridLines .card.ilustracionPhotoshop {
+  grid-column: 1/2;
+  grid-row: 7/8;
+}
+
+
+.gridLayout {
+grid-template-columns: 1fr;
+    grid-template-rows: 7vh 7vh 30vh 45vh 10vh;
+    padding: 5px;
+}
+
+.gridLayout .headerContacto {
+  grid-column: 1/2;  
+}
+
+.gridLayout .encabezadoContacto {
+  grid-column: 1/2;
+}
+
+.gridLayout .mainContacto {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  width: 100%;
+}
+
+.gridLayout .mainContacto form fieldset {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr) 3fr 1.5fr;
+
+}
+
+.gridLayout .mainContacto form fieldset input {
+  height: 80%;
+}
+
+.gridLayout .mainContacto form fieldset .labelComment {
+  grid-column: 1/2;
+}
+
+.gridLayout .mainContacto form fieldset textarea {
+  grid-column: 1/2;  
+}
+
+.gridLayout .mainContacto form fieldset input[type="submit"] {
+  grid-row: 7/8;
+  grid-column: 1/2;
+  
+}
+
+.gridLayout .imgContacto {
+  grid-column: 1/2;
+ margin: 0 auto;
+  width: auto;
+}
+
+ .gridLayout .footerContacto {
+  grid-column: 1/2;
+  grid-row: 5/6;
+} 
+
+.copy {
+  font-size: 10px;  
+}
+
+.whatsapp {
+  right: 15px;
+  bottom: 40px;
+}
+
+.gridLayout .mainContacto form fieldset input[type="submit"] {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px; 
+}
+
+}
